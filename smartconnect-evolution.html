@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartConnect Evolution</title>
+  <link rel="stylesheet" href="smartconnect-evolution.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <h1>SmartConnect Evolution</h1>
+        <div class="badge">Aprendizaje móvil interactivo</div>
+      </div>
+      <div class="score-panel">
+        <span>Bienvenido, <strong id="playerName">invitado</strong></span>
+        <span>Progreso: <strong id="progressCount">0 / 4</strong></span>
+      </div>
+    </header>
+
+    <section class="hero" id="landingSection">
+      <h2>Explora cómo funciona tu celular y la red móvil</h2>
+      <p>Aprende con actividades, simulaciones y evaluaciones cortas sobre las partes del teléfono, redes, datos y señales.</p>
+      <div class="actions" style="justify-content:center; margin-top:22px;">
+        <button class="btn btn-primary" id="startBtn">Comenzar ahora</button>
+        <button class="btn btn-secondary" id="openRegister">Registrarme</button>
+      </div>
+    </section>
+
+    <div class="panel" id="registerPanel" style="display:none;">
+      <div class="section-headline">
+        <h2>Registro rápido</h2>
+        <button class="btn btn-secondary" id="closeRegister">Cerrar</button>
+      </div>
+      <p>Ingresa tu nombre de usuario para guardar tu avance durante esta sesión.</p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
+        <input id="usernameInput" type="text" placeholder="Tu nombre" style="flex:1 1 220px; padding:14px 16px; border-radius:16px; border:1px solid rgba(255,255,255,0.12); background:rgba(255,255,255,0.04); color:var(--text);" />
+        <button class="btn btn-primary" id="saveUser">Guardar</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="top-row">
+        <div>
+          <h2>Menú de módulos</h2>
+          <p>Selecciona el módulo que quieras estudiar y realiza la evaluación al final.</p>
+        </div>
+        <div class="actions">
+          <button class="btn btn-secondary" id="restartBtn">Reiniciar curso</button>
+          <button class="btn btn-secondary" id="continueBtn">Continuar</button>
+        </div>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <div class="nav-list" id="moduleList"></div>
+    </div>
+
+    <section id="contentArea" class="panel hide"></section>
+
+    <footer class="footer">
+      SmartConnect Evolution © 2026. Diseñado para jóvenes curiosos sobre telecomunicaciones.
+    </footer>
+  </div>
+
+  <script src="smartconnect-evolution.js"></script>
+</body>
+</html>
